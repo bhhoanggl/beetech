@@ -1,5 +1,4 @@
-import { defineConfig, loadEnv } from 'vite'
-import { ConfigEnv } from 'vite'
+import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 
 export default defineConfig(({ mode }: ConfigEnv) => {
   const env = loadEnv(mode, process.cwd())
@@ -9,6 +8,11 @@ export default defineConfig(({ mode }: ConfigEnv) => {
   return {
     server: {
       port,
+    },
+    build: {
+      outDir: 'dist',
+      sourcemap: mode === 'development',
+      minify: mode === 'production' ? ('esbuild' as 'esbuild') : false,
     },
   }
 })
