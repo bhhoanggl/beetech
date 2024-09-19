@@ -1,0 +1,13 @@
+{
+    "welcome": "Welcome to React and i18next",
+    "home": "Home",
+    "about": "About",
+    "header": {
+        "gioithieu": "About",
+        "dichvu": "Services",
+        "duan": "Projects",
+        "khoahoc": "Course",
+        "blog": "Blog",
+        "lienhe": "Contact"
+    }
+}
