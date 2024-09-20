@@ -35,7 +35,7 @@ const LanguageSwitcher: React.FC = () => {
             showOptionLabel={false}
             rfsKey="app-lang"
             placeholder="Select Language"
-            className="menu-flags p-0"
+            className="menu-flags p-0 border-none"
             selectButtonClassName="menu-flags-button p-0 border-none rounded-none font-body"
         />
     );
