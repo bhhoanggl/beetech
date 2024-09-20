@@ -4,19 +4,17 @@ import enTranslation from './locale/en.json';
 import viTranslation from './locale/vi.json';
 
 const resources = {
-    vi: {
-        translation: viTranslation,
-    },
-    en: {
-        translation: enTranslation,
-    },
+    en: { translation: enTranslation },
+    vi: { translation: viTranslation },
 };
+
+const language = localStorage.getItem('language') || 'vi';
 
 i18n
     .use(initReactI18next)
     .init({
         resources,
-        lng: 'vi',
+        lng: language,
         fallbackLng: 'vi',
         interpolation: {
             escapeValue: false,
