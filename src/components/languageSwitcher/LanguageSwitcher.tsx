@@ -4,31 +4,30 @@ import { useTranslation } from 'react-i18next';
 
 const LanguageSwitcher: React.FC = () => {
     const { i18n } = useTranslation();
-    const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem('language') || 'VN');
+    const languageMap: { [key: string]: string } = { VN: 'vi', US: 'en' };
+
+    const [selectedLanguage, setSelectedLanguage] = useState(
+        Object.keys(languageMap).find(key => languageMap[key] === localStorage.getItem('language')) || 'VN'
+    );
 
     const handleSelect = (countryCode: string) => {
-        let language = 'vi';
-        if (countryCode === 'US') {
-            language = 'en';
-        }
-
+        const language = languageMap[countryCode] || 'vi';
         i18n.changeLanguage(language);
         localStorage.setItem('language', language);
         setSelectedLanguage(countryCode);
     };
 
     useEffect(() => {
-        const languageMap: { [key: string]: string } = {
-            vi: 'VN',
-            en: 'US'
-        };
-        setSelectedLanguage(languageMap[i18n.language] || 'VN');
+        const countryCode = Object.keys(languageMap).find(
+            key => languageMap[key] === i18n.language
+        ) || 'VN';
+        setSelectedLanguage(countryCode);
     }, [i18n.language]);
 
     return (
         <ReactFlagsSelect
-            countries={["VN", "US"]}
-            customLabels={{ "VN": "Việt Nam", "US": "English" }}
+            countries={Object.keys(languageMap)}
+            customLabels={{ VN: 'Việt Nam', US: 'English' }}
             selected={selectedLanguage}
             onSelect={handleSelect}
             showSelectedLabel={false}

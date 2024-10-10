@@ -4,8 +4,8 @@ import enTranslation from './locale/en.json';
 import viTranslation from './locale/vi.json';
 
 const resources = {
-    en: { translation: enTranslation },
     vi: { translation: viTranslation },
+    en: { translation: enTranslation },
 };
 
 const language = localStorage.getItem('language') || 'vi';
