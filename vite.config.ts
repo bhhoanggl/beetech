@@ -1,3 +1,4 @@
+import MillionLint from "@million/lint";
 import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 
 export default defineConfig(({ mode }: ConfigEnv) => {
@@ -14,5 +15,6 @@ export default defineConfig(({ mode }: ConfigEnv) => {
       sourcemap: mode === 'development',
       minify: mode === 'production' ? ('esbuild' as 'esbuild') : false,
     },
+    plugins: [MillionLint.vite()],
   }
 })

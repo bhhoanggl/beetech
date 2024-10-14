@@ -17,4 +17,3 @@ const Row: React.FC<RowProps> = ({ children, cols = 12, gap = '' }) => {
 
 export default Row;
 
-// Col.tsx
