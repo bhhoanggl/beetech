@@ -10,29 +10,29 @@ import Col from '../common/Col'
 const Footer: React.FC = () => {
     const items = [
         {
-            key: "new",
-            label: "New file",
+            key: "about",
+            label: "Giới thiệu",
+            href: '/about'
+        },
+        {
+            key: "service",
+            label: "Dịch vụ",
             href: '/'
         },
         {
-            key: "copy",
-            label: "Copy link",
+            key: "project",
+            label: "Dự án",
             href: '/'
         },
         {
-            key: "edit",
-            label: "Edit file",
-            href: '/'
-        },
-        {
-            key: "delete",
-            label: "Delete file",
+            key: "contact",
+            label: "Liên hệ",
             href: '/'
         }
     ];
     return (
-        <footer className='py-20'>
-            <Container className=''>
+        <footer className='pt-20'>
+            <Container className='max-w-5xl'>
                 <Row>
                     <Col full={true} md={4}>
                         <div className="logo">
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                     </Col>
                     <Col full={true} md={4}>
                         <div className="item">
-                            <Typography as='h5' className='text-xl font-bold'>Dịch vụ của chúng tôi</Typography>
+                            <Typography as='h5' className='text-xl font-bold'>Liên kết nhanh</Typography>
                             <ListboxWrapper>
                                 {
                                     items.map((item, index) => (
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                     </Col>
                     <Col full={true} md={4}>
                         <div className="item">
-                            <Typography as='h5' className='text-xl font-bold'>Dịch vụ của chúng tôi</Typography>
+                            <Typography as='h5' className='text-xl font-bold'>Kết nối với chúng tôi</Typography>
                             <ListboxWrapper>
                                 {
                                     items.map((item, index) => (
@@ -64,6 +64,11 @@ const Footer: React.FC = () => {
                                 }
                             </ListboxWrapper>
                         </div>
+                    </Col>
+                    <Col full={true} className='mt-4'>
+                        <Typography as='p' className='text-center pt-4 pb-4 border-t-1'>
+                            Bản quyền &copy; 2024 thuộc về Beetech.
+                        </Typography>
                     </Col>
                 </Row>
             </Container>
