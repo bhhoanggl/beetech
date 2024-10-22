@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                     ))}
                     <LanguageSwitcher />
                 </NavbarContent>
-                <NavbarMenu portalContainer={document.getElementById('nav') || undefined} className='bg-primary-overlay'>
+                <NavbarMenu portalContainer={document.getElementById('nav') || undefined} className='bg-primary-bullet'>
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
