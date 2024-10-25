@@ -21,7 +21,7 @@ const Header: React.FC = () => {
 
 
     return (
-        <Navbar id='nav' onMenuOpenChange={setIsMenuOpen} shouldHideOnScroll className='px-0 py-2 w-full h-[60px] sm:h-[83px]' classNames={{
+        <Navbar id='nav' onMenuOpenChange={setIsMenuOpen} shouldHideOnScroll className='px-0 py-2 w-full h-[60px]' classNames={{
             wrapper: 'p-0 max-w-full h-auto',
             base: 'fixed bg-white'
         }}>
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
                             alt=""
                             src="/assets/logo.png"
                             classNames={{
-                                wrapper: 'rounded-none w-[55px] md:w-[91px]'
+                                wrapper: 'rounded-none w-[55px] md:w-[217px]'
                             }}
                             className='rounded-none'
                         />
