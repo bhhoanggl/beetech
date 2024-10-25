@@ -38,6 +38,7 @@ module.exports = {
                 transparent: "transparent",
                 primary: {
                     f8a900: "#f8a900",
+                    '1C1C1C': "#1C1C1C",
                     '333': "#333333",
                     bullet: "rgba(0, 0, 0, 0.8)",
                     bulletlight: "rgba(0, 0, 0, 0.4)",
