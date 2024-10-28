@@ -15,6 +15,13 @@ export default defineConfig(({ mode }: ConfigEnv) => {
       sourcemap: mode === 'development',
       minify: mode === 'production' ? ('esbuild' as 'esbuild') : false,
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler' // or "modern"
+        }
+      }
+    }
     // plugins: [MillionLint.vite()],
   }
 })

@@ -1,5 +1,5 @@
 import React from 'react'
-// import { IconBrandFacebook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandFacebook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
 import { Link } from '@nextui-org/react'
 import Container from '../common/Container'
 import Typography from '../common/Typography'
@@ -31,42 +31,24 @@ const Footer: React.FC = () => {
             href: '/'
         }
     ];
-    // const social = [
-    //     {
-    //         key: "facebook",
-    //         label: "Facebook",
-    //         href: '/',
-    //         icon: `${<IconBrandFacebook />}`
-    //     },
-    //     {
-    //         key: "instagram",
-    //         label: "Instagram",
-    //         href: '/',
-    //         icon: `${<IconBrandInstagram />}`
-    //     },
-    //     {
-    //         key: "github",
-    //         label: "Github",
-    //         href: '/',
-    //         icon: `${<IconBrandGithub />}`
-    //     },
-    //     {
-    //         key: "linkedin",
-    //         label: "LinkedIn",
-    //         href: '/',
-    //         icon: `${<IconBrandLinkedin />}`
-    //     }
-    // ];
 
     return (
         <footer className='pt-20'>
             <Container className='max-w-5xl'>
                 <Row className='gap-y-3'>
-                    <Col full={true} md={4}>
+                    <Col full={true} md={4} className='flex flex-col gap-4 items-center sm:items-start'>
                         <div className="logo">
                             <Link href={''} className='hover:opacity-100 w-[150px] sm:w-[200px]'>
                                 <img src="/assets/logo.png" alt="" />
                             </Link>
+                        </div>
+                        <div className="list-socail">
+                            <ListboxWrapper className='flex items-center gap-4 mx-auto'>
+                                <ListItem href="#" className='w-8 h-8 rounded-full bg-[#1877F2] p-3 flex items-center justify-center' linkClassName='flex items-center justify-center'><IconBrandFacebook className='w-5 text-white' /></ListItem>
+                                <ListItem href="#" className='w-8 h-8 rounded-full bg-[#0A66C2] p-3 flex items-center justify-center' linkClassName='flex items-center justify-center'><IconBrandLinkedin className='w-5 text-white' /></ListItem>
+                                <ListItem href="#" className='w-8 h-8 rounded-full instagram p-3 flex items-center justify-center' linkClassName='flex items-center justify-center'><IconBrandInstagram className='w-5 text-white' /></ListItem>
+                                <ListItem href="#" className='w-8 h-8 rounded-full bg-[#181717] p-3 flex items-center justify-center' linkClassName='flex items-center justify-center'><IconBrandGithub className='w-5 text-white' /></ListItem>
+                            </ListboxWrapper>
                         </div>
                     </Col>
                     <Col span={6} md={4}>
