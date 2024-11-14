@@ -16,5 +16,12 @@ export default defineConfig(({ mode }: ConfigEnv) => {
       minify: mode === 'production' ? ('esbuild' as 'esbuild') : false,
     },
     plugins: [MillionLint.vite()],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler' // or "modern"
+        }
+      }
+    }
   }
 })

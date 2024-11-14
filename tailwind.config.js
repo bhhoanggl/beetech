@@ -42,7 +42,8 @@ module.exports = {
                     '333': "#333333",
                     bullet: "rgba(0, 0, 0, 0.8)",
                     bulletlight: "rgba(0, 0, 0, 0.4)",
-                    overlay: "rgba(248, 169, 0, 0.8 )"
+                    overlay: "rgba(248, 169, 0, 0.8 )",
+                    gradient: "linear-gradient(45deg, #feda77, #dd2a7b, #8134af, #515bd4)"
                 },
                 secondary: {
                     D0E7E6: "#D0E7E6",
