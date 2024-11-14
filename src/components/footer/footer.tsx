@@ -68,6 +68,9 @@ const Footer: React.FC = () => {
                                 <img src="/assets/logo.png" alt="" />
                             </Link>
                         </div>
+                        <div className="infor">
+
+                        </div>
                     </Col>
                     <Col span={6} md={4}>
                         <div className="item">
